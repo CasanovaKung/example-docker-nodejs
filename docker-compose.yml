@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nodejs:
+    container_name: 'nodejs'
+    build:
+      context: ./
+    ports:
+      - ${WEBPORT}:8080
+    networks:
+      - node-app
+    working_dir: /usr/src/app
+    volumes:
+      - ./code:/usr/src/app
+
+volumes:
+  node-src:
+networks:
+  node-app:
