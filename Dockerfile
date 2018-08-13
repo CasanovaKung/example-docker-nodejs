@@ -1,5 +1,7 @@
 FROM node:10
 
+LABEL maintrainer="Jakkrapan Wongchan<casanovakung@windowslive.com>"
+
 # Create app directory
 WORKDIR /usr/src/app
 
